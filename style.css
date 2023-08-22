@@ -29,6 +29,7 @@
     border-radius: 1rem;
     overflow: auto;
     padding: 0 1.5rem 0 1.5rem;
+    height: 100%;
 }
 
 .music-player {
@@ -179,6 +180,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0 1rem 0;
+    z-index: 10;
 }
 
 .sticky-nav img {
@@ -212,7 +214,7 @@
     opacity: 0.7;
 }
 
-.fa-user:hover{
+.fa-user:hover {
     opacity: 1;
 }
 
@@ -222,71 +224,271 @@
     }
 }
 
-.cards{
+.cards {
     background-color: #121212;
 }
-.card{
+
+.card {
     background-color: #232323;
     width: 150px;
     border-radius: 0.5rem;
     padding: 1rem;
     margin-left: 1.5rem;
-    margin-top: 1rem ;
+    margin-top: 1rem;
 }
 
-.cards-container{
+.cards-container {
     background-color: #121212;
     display: flex;
     flex-wrap: wrap;
 }
 
-.card-img{
+.card-img {
     width: 100%;
     border-radius: 0.5rem;
 }
 
-.card-title{
+.card-title {
     font-weight: 600;
 }
 
-.card-info{
+.card-info {
     font-size: 0.75rem;
     opacity: 0.8;
     line-height: 1.25rem;
 }
-.card p{
+
+.card p {
     margin: 0.75rem 0 0;
 }
-h2{
+
+h2 {
     background-color: #121212;
     margin: 1rem 0 1rem 0;
     font-weight: 700;
 }
 
-p{
+p {
     background-color: #121212;
 }
 
-.sticky-nav-options button{
+.sticky-nav-options button {
     cursor: pointer;
 }
 
-.sticky-nav-icons img{
+.sticky-nav-icons img {
     cursor: pointer;
     opacity: 0.7;
 }
 
-.sticky-nav-icons img:hover{
+.sticky-nav-icons img:hover {
     opacity: 1;
 }
 
-.lib-box button{
+.lib-box button {
     cursor: pointer;
 }
 
-.box button{
+.box button {
     cursor: pointer;
 }
-.options .icons i{
+
+.options .icons i {
     cursor: pointer;
+}
+
+.footer {
+    height: 300px;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    background-color: #121212;
+    opacity: 0.4;
+}
+
+.music-player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album {
+    width: 25%;
+    /* background-color: pink; */
+}
+
+.player {
+    width: 50%;
+    /* background-color: orange; */
+}
+
+.controls {
+    width: 25%;
+    /* background-color: green; */
+}
+
+.player-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-control-icon {
+    height: 1rem;
+    margin-left: 1.75rem;
+    opacity: 0.7;
+}
+
+.player-control-icon:hover {
+    opacity: 1;
+}
+
+.playback-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: visible;
+
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background-color: #ddd;
+    border-radius: 100px;
+    height: 0.2rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    border: none;
+    height: 1rem;
+    width: 0.75rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    background-color: #ddd;
+}
+
+.progress-bar::-webkit-slider-runnable-track:hover {
+    background-color: #1bd760;
+}
+
+.album {
+    display: flex;
+}
+
+.album-img {
+    margin: 0.9rem 0 0.25rem 0.3rem;
+    width: 55px;
+    height: 100%;
+    border-radius: 0.25rem;
+}
+
+.h-p {
+    margin: 1rem 0 1rem 0.75rem;
+}
+
+.h3 {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.singer-p {
+    margin-top: 0.2rem;
+    font-size: 0.75rem;
+    background-color: black;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.album-icons {
+    margin: 1.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fa-heart {
+    margin-right: 1rem;
+    opacity: 0.5;
+}
+
+.fa-heart:hover {
+    opacity: 1;
+}
+
+.fa-folder-closed {
+    opacity: 0.5;
+}
+
+.fa-folder-closed:hover {
+    opacity: 1;
+}
+
+.controls {
+    margin-right: 1.25rem;
+}
+
+.icons-controls {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: end;
+    /* margin: 20px; */
+    margin-left: 3rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.volume-bar {
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: visible;
+}
+
+.volume-bar::-webkit-slider-runnable-track {
+    background-color: white;
+    border-radius: 100px;
+    height: 0.35rem;
+}
+
+.volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    border: none;
+    height: 1rem;
+    width: 0.75rem;
+    background-color: #1bd760;
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+.control-icons {
+    opacity: 0.8;
+}
+
+.control-icons:hover {
+    opacity: 1;
+}
+
+.icons-controls input {
+    margin-bottom: 5px;
 }
